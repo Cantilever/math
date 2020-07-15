@@ -34,6 +34,9 @@ class Math
 				$i = 1;
 
 				foreach ($params as $param) {
+					if ($param === '') {
+						$param = 0;
+                    			}
 					if (! is_numeric($param)) {
 						$param = preg_replace('/[^0-9.]*/', '', $param);
 
